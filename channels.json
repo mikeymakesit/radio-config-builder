@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Chan1",
+    "modulation": "FM",
+    "freqTx": "146.520",
+    "freqRx": "146.520",
+    "offsetFreq": "0.0",
+    "offsetDir": "",
+    "memGrpName": "Global",
+    "memGrpNum": 0
+  }
+]
