@@ -6,5 +6,26 @@
     "memGrpName": "Global",
     "lockout": "Off",
     "comment": "2m calling frequency"
+  },
+  {
+    "name": "70cm Call",
+    "freq": "446.000",
+    "modulation": "FM",
+    "memGrpName": "Global",
+    "lockout": "Off",
+    "comment": "70cm calling frequency"
+  },
+  {
+    "name": "WW7PSR",
+    "freqRx": "146.960",
+    "freqTx": "146.360",
+    "offsetFreq": 600000,
+    "offsetDir": "-",
+    "toneMode": "Tone",
+    "ctcssTx": 103.5,
+    "modulation": "FM",
+    "memGrpName": "Seattle",
+    "lockout": "Off",
+    "comment": "https://web.psrg.org/"
   }
 ]

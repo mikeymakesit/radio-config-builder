@@ -2,6 +2,8 @@ class RadioFormat():
   brand   = 'Kenwood'
   model   = 'TH-D75'
   cpsName = 'RT Systems'
+  
+  chanNameMaxlen = 14
 
   # Headers from exported CSV:
   # Channel Number,Receive Frequency,Transmit Frequency,Offset Frequency,
@@ -44,7 +46,7 @@ class RadioFormat():
       
       elif k == '':
         pass
-      
+
       else:
         row[k] = getattr(c, k)
         

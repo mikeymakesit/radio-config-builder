@@ -7,14 +7,12 @@ class ChannelEntry(BaseModel):
     validate_assignment=True
   )
   name: str
-  freq: Optional[str]
+  freq: Optional[str] = 146.520
   freqRx: Optional[float] = 146.520
   freqTx: Optional[float] = 146.520
   modulation: Optional[str] = "FM"
   offsetFreq: Optional[float] = 0.0
   offsetDir: Optional[str] = ""
-  memGrpName: Optional[str] = ""
-  memGrpNum: Optional[int] = 0
   toneMode: Optional[str] = ""
   ctcssTx: Optional[float] = 67.0
   ctcssRx: Optional[float] = 67.0
@@ -28,6 +26,8 @@ class ChannelEntry(BaseModel):
   yourCall: Optional[str] = ""
   rpt1Call: Optional[str] = ""
   rpt2Call: Optional[str] = ""
+  memGrpName: Optional[str] = ""
+  memGrpNum: Optional[int] = 0
   comment: Optional[str] = ""
 
 class ChannelData(RootModel):
