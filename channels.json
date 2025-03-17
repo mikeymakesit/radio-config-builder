@@ -1,12 +1,10 @@
 [
   {
-    "name": "Chan1",
+    "name": "2m Call",
+    "freq": "146.520",
     "modulation": "FM",
-    "freqTx": "146.520",
-    "freqRx": "146.520",
-    "offsetFreq": "0.0",
-    "offsetDir": "",
     "memGrpName": "Global",
-    "memGrpNum": 0
+    "lockout": "Off",
+    "comment": "2m calling frequency"
   }
 ]
