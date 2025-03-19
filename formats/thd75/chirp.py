@@ -7,34 +7,26 @@ class RadioFormat():
 
   chanNameMaxlen = 14
 
-  # Headers from exported CSV:
-  # Channel Number,Receive Frequency,Transmit Frequency,Offset Frequency,
-  # Offset Direction,Operating Mode,Name,Tone Mode,CTCSS,Rx CTCSS,DCS,Lockout,
-  # Step,Fine Step Enable,Fine Step,Digital Squelch,Digital Code,Your Callsign,
-  # Rpt-1 CallSign,Rpt-2 CallSign,Group,Comment
+  # Headers and examples from exported CSV:
+  # Location,Name,Frequency,Duplex,Offset,Tone,rToneFreq,cToneFreq,DtcsCode,DtcsPolarity,RxDtcsCode,CrossMode,Mode,TStep,Skip,Power,Comment,URCALL,RPT1CALL,RPT2CALL,DVCODE
+  # 0,2m Call,146.520000,,0.600000,,88.5,88.5,023,NN,023,Tone->Tone,FM,5.00,,50W,,,,,
+  # 1,70cm Call,446.000000,,5.000000,,88.5,88.5,023,NN,023,Tone->Tone,FM,25.00,,50W,,,,,
+  # 2,WW7PSR,146.960000,-,0.600000,TSQL,103.5,103.5,023,NN,023,Tone->Tone,FM,5.00,,50W,,,,,
   fieldOrder = [
     'num',
-    'freqRx',
-    'freqTx',
-    'offsetFreq',
-    'offsetDir',
-    'modulation',
     'name',
+    'freqRx',
+    'offsetDir',
+    'offsetFreq',
     'toneMode',
     'ctcssTx',
     'ctcssRx',
     'dcs',
-    'lockout',
-    'stepKhz',
-    'fineStepEnable',
-    'fineStepHz',
-    'dstarDigitalSquelch',
-    'dstarDigitalCode',
-    'yourCall',
-    'rpt1Call',
-    'rpt2Call',
-    'memGrpName',
-    'comment'
+    'NN',
+    'dcs',
+    'crossMode'
+    'modulation',
+    'bandwidthKhz'
   ]
 
   def render_row(self, c: dict, n: int) -> dict:

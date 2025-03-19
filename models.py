@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Literal
 from pydantic import BaseModel, RootModel, ConfigDict
 
 class ChannelEntry(BaseModel):
@@ -10,19 +10,20 @@ class ChannelEntry(BaseModel):
   freq: Optional[str] = 146.520
   freqRx: Optional[float] = 146.520
   freqTx: Optional[float] = 146.520
-  modulation: Optional[str] = "FM"
+  modulation: Literal["FM", "FM Narrow", "DMR", "DSTAR"] = "FM"
   offsetFreq: Optional[float] = 0.0
-  offsetDir: Optional[str] = ""
-  toneMode: Optional[str] = ""
-  ctcssTx: Optional[float] = 67.0
-  ctcssRx: Optional[float] = 67.0
+  offsetDir: Literal["simplex", "-", "+"] = "simplex"
+  toneMode: Literal["", "tone", "tsql"] = ""
+  ctcssTx: Optional[float] = 88.5
+  ctcssRx: Optional[float] = 88.5
   dcs: Optional[int] = 23
-  lockout: Optional[str] = "Off"
-  step: Optional[str] = ""
-  fineStepEnable: Optional[str] = ""
-  fineStep: Optional[str] = ""
-  digitalSquelch: Optional[str] = ""
-  digitalCode: Optional[int] = 0
+  lockout: Optional[str] = "off"
+  bandwidthKhz: Optional[int] = 25
+  stepKhz: Optional[int] = 5
+  fineStepEnable: Literal["on", "off"] = "off"
+  fineStepHz: Optional[int] = 100
+  dstarDigitalSquelch: Literal["on", "off"] = "off"
+  dstarDigitalCode: Optional[str] = ""
   yourCall: Optional[str] = ""
   rpt1Call: Optional[str] = ""
   rpt2Call: Optional[str] = ""
