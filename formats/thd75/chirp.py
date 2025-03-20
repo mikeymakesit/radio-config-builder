@@ -5,7 +5,7 @@ class RadioFormat():
   model   = 'TH-D75'
   cpsName = 'RT Systems'
 
-  chanNameMaxlen = 14
+  chanNameMaxlen = 16
 
   # Headers and examples from exported CSV:
   # Location,Name,Frequency,Duplex,Offset,Tone,rToneFreq,cToneFreq,DtcsCode,DtcsPolarity,RxDtcsCode,CrossMode,Mode,TStep,Skip,Power,Comment,URCALL,RPT1CALL,RPT2CALL,DVCODE
@@ -21,75 +21,65 @@ class RadioFormat():
     'toneMode',
     'ctcssTx',
     'ctcssRx',
-    'dcs',
-    'NN',
-    'dcs',
-    'crossMode'
+    'dcsTx',
+    'dcsPolarity',
+    'dcsRx',
+    'crossMode',
     'modulation',
-    'bandwidthKhz'
+    'stepKhz',
+    'lockout',
+    'txPowerW',
+    'comment',
+    'yourCall',
+    'rpt1Call',
+    'rpt2Call',
+    'dstarDigitalCode'
   ]
 
   def render_row(self, c: dict, n: int) -> dict:
     """ Given a row of channel data, return a dict formatted for this CPS """
     row = dict()
     for k in self.fieldOrder:
+      if k != 'num':
+        val = getattr(c,k)
 
       if k == 'num':
         # Channel number
         row[k] = n
       
-      elif k == 'offsetFreq':
-        val = getattr(c,k)
-        if val < 1.0:
-          row[k] = str(floor((val * 1000.0))) + ' kHz'
-        else:
-          row[k] = str(val) + ' MHz'
+      elif k == 'name':
+        row[k] = val[:self.chanNameMaxlen]
       
       elif k == 'offsetDir':
-        val = getattr(c,k)
-        if val == '-':
-          row[k] = 'Minus'
-        elif val == '+':
-          row[k] = 'Plus'
+        if val == 'simplex':
+          row[k] = ''
         else:
-          row[k] = val.title()
+          row[k] = val
 
-      elif k == 'ctcssTx' or k == 'ctcssRx':
-        row[k] = str(getattr(c,k)) + ' Hz'
-      
-      elif k == 'lockout':
-        row[k] = getattr(c,k).title()
-      
       elif k == 'toneMode':
-          # None, Tone, T Sql
-          val = getattr(c,k)
-          if val == '':
-            row[k] = 'None'
-          elif val == 'tsql':
-            row[k] = 't sql'.title()
-          else:
+          if val == 'tsql':
+            row[k] = val.upper()
+          elif val in ['tone', 'cross']:
             row[k] = val.title()
+          else:
+            row[k] = val
       
       elif k == 'stepKhz':
-        row[k] = str(getattr(c,k)) + ' kHz'
-
-      elif k == 'fineStepEnable':
-        row[k] = getattr(c,k).title()
+        row[k] = float(val)
       
-      elif k == 'fineStepHz':
-        row[k] = str(getattr(c,k)) + ' Hz'
-
-      elif k == 'dstarDigitalSquelch':
-        row[k] = getattr(c,k).title()
+      elif k == 'lockout':
+        if val == "on":
+          row[k] = 'S'
+        else:
+          row[k] = ''
+      
+      elif k == 'txPowerW':
+        row[k] = str(floor(val)) + 'W'
       
       elif k == 'dstarDigitalCode':
-        val = getattr(c,k).title()
-        if val == '':
-          row[k] = str(0)
-        else:
-          row[k] = val.title()
+        row[k] = val.title()
 
       else:
-        row[k] = getattr(c,k)
+        row[k] = val
         
     return row

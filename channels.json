@@ -4,7 +4,7 @@
     "freq": "146.520",
     "modulation": "FM",
     "memGrpName": "Global",
-    "lockout": "Off",
+    "lockout": "off",
     "comment": "2m calling frequency"
   },
   {
@@ -12,7 +12,7 @@
     "freq": "446.000",
     "modulation": "FM",
     "memGrpName": "Global",
-    "lockout": "Off",
+    "lockout": "off",
     "comment": "70cm calling frequency"
   },
   {
@@ -26,7 +26,7 @@
     "ctcssTx": 103.5,
     "modulation": "FM",
     "memGrpName": "Seattle",
-    "lockout": "Off",
+    "lockout": "off",
     "comment": "https://web.psrg.org/"
   },
   {
@@ -34,154 +34,154 @@
     "freqRx": "462.56250",
     "freqTx": "462.56250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 2",
     "freqRx": "462.58750",
     "freqTx": "462.58750",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 3",
     "freqRx": "462.61250",
     "freqTx": "462.61250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 4",
     "freqRx": "462.63750",
     "freqTx": "462.63750",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 5",
     "freqRx": "462.66250",
     "freqTx": "462.66250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 6",
     "freqRx": "462.68750",
     "freqTx": "462.68750",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 7",
     "freqRx": "462.71250",
     "freqTx": "462.71250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 8",
     "freqRx": "467.56250",
     "freqTx": "467.56250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 9",
     "freqRx": "467.58750",
     "freqTx": "467.58750",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 10",
     "freqRx": "467.61250",
     "freqTx": "467.61250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 11",
     "freqRx": "467.63750",
     "freqTx": "467.63750",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 12",
     "freqRx": "467.66250",
     "freqTx": "467.66250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 13",
     "freqRx": "467.68750",
     "freqTx": "467.68750",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 14",
     "freqRx": "467.71250",
     "freqTx": "467.71250",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 15",
     "freqRx": "462.55000",
     "freqTx": "462.55000",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 16",
     "freqRx": "462.57500",
     "freqTx": "462.57500",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 17",
     "freqRx": "462.60000",
     "freqTx": "462.60000",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 18",
     "freqRx": "462.62500",
     "freqTx": "462.62500",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 19",
     "freqRx": "462.65000",
     "freqTx": "462.65000",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 20",
     "freqRx": "462.67500",
     "freqTx": "462.67500",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 21",
     "freqRx": "462.70000",
     "freqTx": "462.70000",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "GMRS 22",
     "freqRx": "462.72500",
     "freqTx": "462.72500",
     "memGrpName": "GMRS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "OLYCOMM3",
@@ -193,7 +193,7 @@
     "toneMode": "tsql",
     "ctcssRx": 141.3,
     "ctcssTx": 141.3,
-    "lockout": "Off",
+    "lockout": "off",
     "comment": "East Tiger"
   },
   {
@@ -201,34 +201,34 @@
     "freqRx": "151.82000",
     "freqTx": "151.82000",
     "memGrpName": "MURS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "MURS 2",
     "freqRx": "151.88000",
     "freqTx": "151.88000",
     "memGrpName": "MURS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "MURS 3",
     "freqRx": "151.94000",
     "freqTx": "151.94000",
     "memGrpName": "MURS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "MURS 4",
     "freqRx": "154.57000",
     "freqTx": "154.57000",
     "memGrpName": "MURS",
-    "lockout": "Off"
+    "lockout": "off"
   },
   {
     "name": "MURS 5",
     "freqRx": "154.60000",
     "freqTx": "154.60000",
     "memGrpName": "MURS",
-    "lockout": "Off"
+    "lockout": "off"
   }
 ]

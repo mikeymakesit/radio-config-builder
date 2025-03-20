@@ -5,7 +5,7 @@ class RadioFormat():
   model   = 'TH-D75'
   cpsName = 'RT Systems'
 
-  chanNameMaxlen = 14
+  chanNameMaxlen = 16
 
   # Headers from exported CSV:
   # Channel Number,Receive Frequency,Transmit Frequency,Offset Frequency,
@@ -23,7 +23,7 @@ class RadioFormat():
     'toneMode',
     'ctcssTx',
     'ctcssRx',
-    'dcs',
+    'dcsTx',
     'lockout',
     'stepKhz',
     'fineStepEnable',
@@ -45,6 +45,9 @@ class RadioFormat():
       if k == 'num':
         # Channel number
         row[k] = n
+      
+      elif k == 'name':
+        row[k] = getattr(c,k)[:self.chanNameMaxlen]
       
       elif k == 'offsetFreq':
         val = getattr(c,k)
